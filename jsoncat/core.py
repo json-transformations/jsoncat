@@ -29,8 +29,23 @@ def load_json(filename):
         return json.load(file_)
 
 
-def load_json_files(*filenames, ctx=None, is_tty=False):
+def load_json_files(*filenames, **kwds):
     """JSON Decoder with Standard Input/File Handler.
+
+    Args:
+        filenames [str, ...]:
+            A list of filenames to concatenate.
+
+    Kwds:
+        ctx (click.Context):
+            Command Context (used to display command usage message).
+
+        is_tty:
+            Set to True if the STDIN is connected to a TTY(-like)
+            device; typically set to sys.stdin.isatty()
+
+    Returns:
+        The JSON document as a dictionary.
 
     +---------+-------------------+--------------------------------+
     | Stdin   | File Name(s)      | Defined Behavior               |
@@ -49,7 +64,8 @@ def load_json_files(*filenames, ctx=None, is_tty=False):
     +---------+-------------------+--------------------------------+
     """
     if not filenames:
-        if is_tty:
+        if kwds.get('is_tty', False):
+            ctx = kwds.get('ctx', None)
             if ctx:
                 output_text(ctx.get_usage())
             usage = "Try `{cmd} --help' for more information."
