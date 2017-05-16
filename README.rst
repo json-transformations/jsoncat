@@ -17,7 +17,7 @@ Usage
 
     Usage: jsncat [OPTIONS] [JSONFILES]...
 
-    Concatenate JSON FILE(s), or standard input, to standard output.
+    Concatenate JSON FILE(s), or standard input, format standard output.
 
     Options:
       -c, --compact  Compact (squeeze) JSON.
