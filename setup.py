@@ -12,7 +12,7 @@ with open('jsoncat/__init__.py', 'rb') as f:
         f.read().decode('utf-8')).group(1)))
 
 setup(
-    name='jsoncat',
+    name='json-cat',
     version=version,
     author='Brian Peterson',
     author_email='bpeterso2000@yahoo.com',
