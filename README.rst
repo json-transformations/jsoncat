@@ -2,6 +2,8 @@
 JSON Cat
 ########
 
+|Version Status|
+
 A simple, barebones JSON I/O wrapper with a command-line interface.
 
 
@@ -106,3 +108,7 @@ JSON Helper Functions
   json_load_file(filename)
 
   json_dump(data, compact=False)
+
+
+.. |Version Status| image:: https://badge.fury.io/py/json-cat.svg
+    :target: https://badge.fury.io/py/json-cat
