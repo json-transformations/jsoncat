@@ -11,5 +11,4 @@ python:
   - "nightly"
   - "pypy"
 
-install: "pip install click pytest"
 script: py.test
