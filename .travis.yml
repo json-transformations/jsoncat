@@ -11,5 +11,5 @@ python:
   - "nightly"
   - "pypy"
 
-install: "pip install click"
+install: "pip install click pytest"
 script: pytest
