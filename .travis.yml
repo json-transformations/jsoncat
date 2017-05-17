@@ -12,4 +12,4 @@ python:
   - "pypy"
 
 install: "pip install click pytest"
-script: pytest
+script: py.test
