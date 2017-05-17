@@ -11,5 +11,5 @@ python:
   - "nightly"
   - "pypy"
 
-install: "pip install click pytest-cov"
-script: pytest --cov=jsoncat
+install: "pip install click"
+script: pytest
