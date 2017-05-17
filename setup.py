@@ -16,7 +16,7 @@ setup(
     version=version,
     author='Brian Peterson',
     author_email='bpeterso2000@yahoo.com',
-    url='http://github.com/bpeterso2000/jsoncat',
+    url='http://github.com/json-transformations/jsoncat',
     packages=['jsoncat'],
     description='Concatenate JSON FILE(s), or STDIN, format to STDOUT.',
     classifiers=['License :: OSI Approved :: MIT License',
