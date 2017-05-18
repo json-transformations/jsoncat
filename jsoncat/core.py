@@ -16,6 +16,9 @@ def output_lines(lines, color=None, err=False):
         for line in lines:
             click.echo(line, color=color, err=err)
     except KeyboardInterrupt:
+        err = True
+
+    if err:
         sys.exit(1)
 
 
