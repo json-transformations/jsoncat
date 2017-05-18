@@ -67,7 +67,7 @@ def load_json_files(*filenames, **kwds):
     +---------+-------------------+--------------------------------+
     """
     if not filenames:
-        if kwds.get('is_tty', False):
+        if kwds.get('is_tty'):
             ctx = kwds.get('ctx', None)
             if ctx:
                 output_text(ctx.get_usage())
