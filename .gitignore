@@ -1,7 +1,6 @@
 .cache
-.coverage
-__pycache__
-*.py[cod]
-*.egg-info/
-build/
-dist/
+*.egg-info
+*.eggs/*
+*.pyc
+build/*
+dist
