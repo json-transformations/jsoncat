@@ -18,7 +18,7 @@ class JSONFile(click.File):
         super(JSONFile, self).__init__(**kwds)
 
     def convert(self, value, param, ctx):
-        self.encoding = ctx.params['encoding']
+        self.encoding = ctx.params.get('encoding')
         if value == '-' and click._termui_impl.isatty(sys.stdin):
             return self.display_usage(param, ctx)
         try:
