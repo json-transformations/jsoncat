@@ -4,7 +4,7 @@ JSON Cat
 
 |Version Status|
 
-A simple, barebones JSON I/O wrapper with a command-line interface.
+Concatenate JSON file(s) or standard input to standard output.
 
 
 Installation
@@ -17,14 +17,21 @@ Usage
 
 .. code-block:: bash
 
-    Usage: jsncat [OPTIONS] [JSONFILES]...
+    Usage: jsoncat [OPTIONS] [JSONFILES]...
 
     Concatenate JSON FILE(s), or standard input, format standard output.
 
     Options:
-      -c, --compact  Compact (squeeze) JSON.
+      -c, --compact  Compact JSON.
       --version      Show the version and exit.
       --help         Show this message and exit.
+
+Overview
+========
+
+JSON can be output as pretty JSON (nicely indented
+with sorted keys) for readability, or as compacted JSON for efficient
+machine use.
 
 
 JSON File Patterns
@@ -41,9 +48,9 @@ JSON File Patterns
 +---------+-------------------+--------------------------------+
 | No Data | Dash char. (-)    | Accept user input until EOF    |
 +---------+-------------------+--------------------------------+
-| Either  | Filename          | Read JSON data from file       |
+| N/A     | Filename          | Read JSON data from file       |
 +---------+-------------------+--------------------------------+
-| Either  | File1, File2, ... | Concatenate JSON data in array |
+| N/A     | File1, File2, ... | Concatenate JSON data in array |
 +---------+-------------------+--------------------------------+
 
 Compact Settings
