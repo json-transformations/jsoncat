@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 # retrieve __version__ number from __init__.py
 _version_re = re.compile(r'__version__\s+=\s+(.*)')
-with open('cli.py', 'rb') as f:
+with open('jsoncat/__init__.py', 'rb') as f:
     version = str(ast.literal_eval(_version_re.search(
         f.read().decode('utf-8')).group(1)))
 
@@ -13,7 +13,7 @@ with open('README.rst', 'r', encoding='utf-8') as f:
     readme = f.read()
 
 setup(
-    name="jsoncat",
+    name="jsoncat-tool",
     version=version,
     url="http://github.com/json-transformations/jsoncat",
     keywords=['format', 'json', 'dump', 'console', 'terminal', 'command-line'],
@@ -24,7 +24,7 @@ setup(
     description="Concatenate JSON FILE(s), or STDIN, format to STDOUT.",
     long_description=readme,
 
-    packages=find_packages(include=['jsonls']),
+    packages=find_packages(include=['jsoncat']),
     include_package_data=True,
     zipsafe=False,
 
@@ -36,7 +36,7 @@ setup(
         'Topic :: Utilities',
     ],
 
-    install_requires=['click==6.7', 'contextlib2===0.5.5'],
+    install_requires=['click==6.7', 'contextlib2==0.5.5'],
 
     test_suite='tests',
     test_requires=['flake8', 'mock', 'pytest-cov', 'tox'],
