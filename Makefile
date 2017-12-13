@@ -1,2 +1,2 @@
 release:
-	python setup.py --universal sdist bdist_wheel --universal upload
+	python setup.py sdist bdist_wheel --universal upload
