@@ -3,7 +3,7 @@ import json
 import pytest
 import click.testing
 
-import cli
+from jsoncat import cli
 
 D1 = {"asteroid": "433 Eros"}
 D2 = {"asteroid": "951 Gaspra"}
